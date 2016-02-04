@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+<!--  Telephone=no disabilita riconoscimento sequenze di nueri come numeri telefonici. Saremo noi ad assegnare l'appartenenza di un nunero a un telefono con i links:
+       <a href="tel:021234567">Chiamaci al 02/1234567</a>
+       <a href="sms:021234567">Scrivi un SMS al ....</a>
+       -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>La mia Prima App</title>
+    </head>
+    <body>
+<!--        Fixed navbar -->
+       <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>  
+                  </button>
+                  <a class="navbar-brand" href="#"><img alt="Mohole" src="img/icon.png" width="30" height="30"></a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                     <li class="active"><a href="#">Home</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Contact</a></li>
+                 </ul>
+                 <ul class="nav navbar-nav navbar-right">
+                     <li><a href="../navbar">Default</a></li>
+                     <li><a href="../navbar-static-top">Static top</a></li>
+                     <li class="active"><a href="./">Fixed Top</a></li>
+                 </ul>
+                  
+              </div>
+          </div>
+           
+       </nav>
+        <div class="container">
+            <div class="row text-center">
+                <h3>Mohole App</h3>
+                <p>Benvenuto nella nostra App!</p>
+                <p><a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#smallModal">Apri messaggio</a></p>
+                <p>Prova a installarmi sul tuo smartphone...</p>
+                <p class="glyphicon glyphicon-camera"></p>
+                <p class="glyphicon glyphicon-folder-open"></p>
+            </div>
+        </div>
+        
+<!--        Codice della finestra modale    -->
+       <div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"></button>
+                      <h4 class="modal-title" id="myModalLabel">Modale Mohole App</h4>
+                  </div>
+                  <div class="modal-body">
+                      <h3>Attenzione</h3>
+                      <p>Stai creando un app con Cordova /Phonegap Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit autem, in exercitationem eos quod provident pariatur dolore eius facere.</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Chiudi</button>
+                  </div>
+                  
+              </div>
+          </div>
+       </div> <!-- fine codice modale -->
+       
+   <!-- Footer fixed -->
+       <footer class="footer">
+           <div class="container">
+               <p class="textfooter">Una prima app di Mohole</p>
+           </div>
+       </footer>     
+        <!-- carico prima i files js della mia app -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script javascript da lasciare: cordova.js verrà creato durante il build, index.js potrebbe essere il mio codice della mia app -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
